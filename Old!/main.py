@@ -1,10 +1,7 @@
 import requests
 from exaroton import Exaroton
-exa = Exaroton("FvomzAoIGUKDLZc4TMNHXUoEUTY9lTHDyY2Qi4LuaneXeguyUayKjKr5y8ZCQ9h5Lnba1FZKUboAm63h9SpNpNFueJqqdKjt46u8")
 
 
-
-print("type [help] for help")
 def infinite():
     while True:
         yield
@@ -20,18 +17,17 @@ for a in infinite():
 
     cmd = input("GAMC.ONLYKYRO >>")
     if (cmd == "start"):
-        print(exa.start("Pn8J6Yy0TWUqflP6"))
+        Exaroton.start()
     elif (cmd == "stop"):
-        print(exa.stop("Pn8J6Yy0TWUqflP6"))
+        Exaroton.stop()
     elif (cmd == "restart"):
-        print(exa.restart("Pn8J6Yy0TWUqflP6"))
+        Exaroton.restart()
     elif (cmd == "get_server"):
-        print(exa.get_server("Pn8J6Yy0TWUqflP6"))
+        Exaroton.get_server()
     elif (cmd == "get_player_list"):
-        print(exa.get_player_list("Pn8J6Yy0TWUqflP6", "whitelist"))
-
+        Exaroton.get_player_list()
     elif (cmd == "get_server_ram"):
-        print(exa.get_server_ram("Pn8J6Yy0TWUqflP6"))
+        Exaroton.get_server_ram()
     elif (cmd == "help"):
         print("Help command issued:")
         print("[start] -> start the server")
