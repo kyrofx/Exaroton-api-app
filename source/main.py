@@ -4,7 +4,7 @@ import requests
 from data import exaroton
 
 
-exa = exaroton.Exaroton("[ENTER YOUR KEY HERE]")
+exa = exaroton.Exaroton("")
 
 
 
@@ -111,8 +111,8 @@ if (sudo == True):
         elif (cmd=="disable_server"):
             length = len(exa.get_player_list("Pn8J6Yy0TWUqflP6", "whitelist"))
 
-            for i in range(length):
-                user.append(exa.get_player_list("Pn8J6Yy0TWUqflP6", "whitelist"))
+
+            user.append(exa.get_player_list("Pn8J6Yy0TWUqflP6", "whitelist"))
             print(user)
             print("removing...")
             for i in range(length):
@@ -125,6 +125,7 @@ if (sudo == True):
                 for i in range(len(user)):
                     print(exa.add_player_to_list("Pn8J6Yy0TWUqflP6", "whitelist", user[i]))
                 print("operation successful.")
+                user = 0
         elif (cmd == "cmd"):
             send = input("cmd>> ")
             print(exa.send_command("Pn8J6Yy0TWUqflP6", send))
